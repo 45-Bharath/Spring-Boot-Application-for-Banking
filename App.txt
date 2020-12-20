@@ -1,0 +1,36 @@
+public class App {
+public static void main(String[] args) {
+BankService.openAccount(XYZ);
+Thread2 t2 = new Thread2();
+Thread3 t3 = new Thread3();
+Thread4 t4 = new Thread4();
+t2.start();
+t3.start();
+t4.start();
+}
+}
+
+class Thread2 extends Thread {
+    BankService bs = BankService.getInstance();
+    public void run(){
+        System.out.println("bs instrance is"+bs.hashCode());
+        bs.doWithdrawal(XYZ);
+    }
+}
+class Thread3 extends Thread {
+    BankService bs = BankService.getInstance();
+
+    public void run(){
+        System.out.println("bs instrance is"+bs.hashCode());
+
+        bs.doWithdrawal(XYZ);
+    }
+}
+class Thread4 extends Thread {
+    BankService bs = BankService.getInstance();
+    public void run(){
+        System.out.println("bs instrance is"+bs.hashCode());
+
+        bs.doWithdrawal(XYZ);
+    }
+}

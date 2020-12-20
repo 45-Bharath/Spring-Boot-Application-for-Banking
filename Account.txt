@@ -1,0 +1,50 @@
+Account.java
+
+public class Account {
+
+int number ;
+float currentBalance ;
+float openingBalance ;
+String accountHolder ;
+String branch ;
+float rateOfInterest ;
+
+public int getNumber() {
+return number;
+}
+public void setNumber(int number) {
+this.number = number;
+}
+public float getCurrentBalance() {
+return currentBalance;
+}
+public void setCurrentBalance(float currentBalance) {
+this.currentBalance = currentBalance;
+}
+public float getOpeningBalance() {
+return openingBalance;
+}
+public void setOpeningBalance(float openingBalance) {
+this.openingBalance = openingBalance;
+}
+public String getAccountHolder() {
+return accountHolder;
+}
+public void setAccountHolder(String accountHolder) {
+this.accountHolder = accountHolder;
+}
+public String getBranch() {
+return branch;
+}
+public void setBranch(String branch) {
+this.branch = branch;
+}
+public float getRateOfInterest() {
+return rateOfInterest;
+}
+public void setRateOfInterest(float rateOfInterest) {
+this.rateOfInterest = rateOfInterest;
+}
+}
+
+

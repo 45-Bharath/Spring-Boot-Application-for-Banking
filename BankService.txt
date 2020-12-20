@@ -1,0 +1,32 @@
+public class BankService {
+private static BankService bankService ;
+private BankService(){
+}
+public static BankService getInstance(){
+if(bankService==null){
+return bankService = new BankService();
+}
+return bankService;
+}
+static Map<Integer,Account> accountMap = new HashMap<Integer, Account>();
+public void doDeposit(float amount,int accountNum)
+Account acc = accountMap.get(accountNum);
+acc.setCurrentBalance(acc.getCurrentBalance()+amount);
+System.out.println("made deposit");
+System.out.println("account :   "+acc.getNumber()+"   "+acc.getCurrentBalance());
+}
+public synchronized void doWithdrawal(float amount,int accountNum){
+Account acc = accountMap.get(accountNum);
+acc.setCurrentBalance(acc.getCurrentBalance()-amount);
+System.out.println("account :   "+acc.getNumber()+"   "+acc.getCurrentBalance());
+}
+public void checkBalance(int accountNumber){
+}
+public static void openAccount(int accnum){
+Account acc = new Account();
+acc.setCurrentBalance(2000);
+acc.setNumber(1001);
+accountMap.put(acc.getNumber(), acc);
+System.out.println("obj is"+accountMap);
+}
+}
